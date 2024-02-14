@@ -18,8 +18,8 @@ public class BMIController {
         User user1 = (User) httpSession.getAttribute("user");
 
         if(user1 != null) {
-            if(user.getHeight() < 8 && user.getWeight() < 125) {
-                double bmiCalculator = user.getWeight() / (user.getHeight() * user.getHeight()) * 703;
+            if(user.getHeight() < 80 && user.getWeight() < 400) {
+                double bmiCalculator = (double) Math.round((user.getWeight() / (user.getHeight() * user.getHeight()) * 703) * 100) / 100;
                 model.addAttribute("bmiCalculator", bmiCalculator);
                 model.addAttribute("userName", user1.getUserName());
             }
