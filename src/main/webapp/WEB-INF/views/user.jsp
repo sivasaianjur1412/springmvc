@@ -10,10 +10,10 @@
 <h3>Hi ${userName}</h3>
     <form action="${pageContext.request.contextPath}/user/bmi" method="post">
         <label>Height: </label>
-        <input type="number" name="height"><br><br>
+        <input type="text" name="height"><br><br>
 
         <label>Weight: </label>
-        <input type="number" name="weight"></br><br>
+        <input type="text" name="weight"></br><br>
 
         <input type="submit" value="Get BMI">
     </form>
